@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+<menu id="root-menu" label="Openbox">
+  <item label="firefox">
+    <action name="Execute"><command>firefox</command></action>
+  </item>
+  <item label="keepassxc">
+    <action name="Execute"><command>keepassxc</command></action>
+  </item>
+  <item label="xterm">
+    <action name="Execute"><command>xterm</command></action>
+  </item>
+  <item label="xfce4-terminal">
+    <action name="Execute"><command>xfce4-terminal</command></action>
+  </item>
+  <item label="arandr">
+    <action name="Execute"><command>arandr</command></action>
+  </item>
+  <item label="lxappearance">
+    <action name="Execute"><command>lxappearance</command></action>
+  </item>
+  <item label="Log Out">
+    <action name="Exit"></action>
+  </item>
+</menu>
+</openbox_menu>

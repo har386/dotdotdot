@@ -1,0 +1,7 @@
+#xset -b
+#(sleep 1s && compton) &
+#(sleep 2s && ksuperkey) &
+
+compton -b &
+ksuperkey &
+xfce-power-manager &
