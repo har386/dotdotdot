@@ -1,0 +1,31 @@
+#!/bin/bash
+
+distro=$(lsb_release -is)
+
+ubuntus=("neon" "Ubuntu")
+arches=("Arch")
+
+
+ubu_strap () {
+ echo "hi ubu"
+}
+
+arch_strap () {
+  sudo pacman --noconfirm -Syu
+  sudo pacman --noconfirm -S xorg xorg-drivers xorg-xinit xterm openbox firefox tmux vim fish noto-fonts compton ttf-hack keepassxc htop tree arandr xfce4-terminal aria2 mpv lxappearance unzip rofi termite lightdm lightdm-gtk-greeter papirus-icon-theme nitrogen xfce4-power-manager
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg --noconfirm -si
+  cd ..
+  rm -rf yay
+  yay --noconfirm -S ttf-lato polybar ksuperkey
+}
+
+
+if  [[ " ${ubuntus[@]} " =~ " ${distro} " ]]; then ubu_strap
+elif [[ " ${arches[@]} " =~ " ${distro} " ]]; then arch_strap
+else
+  echo "u r fucked"
+fi
+
+
